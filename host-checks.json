@@ -1,0 +1,10 @@
+[
+  {
+    "name": "handoff",
+    "cwd": "vrx/netrunner_runtime",
+    "sources": [
+      "netrunner_handoff.c",
+      "tests/handoff_test.c"
+    ]
+  }
+]

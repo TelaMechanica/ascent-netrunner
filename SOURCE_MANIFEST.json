@@ -1,0 +1,47 @@
+{
+  "name": "ascent-netrunner",
+  "status": "LOCAL_SANITIZED_SUBSET_NOT_RELEASE",
+  "source_mutated": false,
+  "source_inputs": {
+    "vrx/netrunner_runtime/netrunner_handoff.c": "d4b4c7d5e0f6ead28e967606a9d3218b8292087400c4582e7a8604d834d8d0e6",
+    "vrx/netrunner_runtime/netrunner_handoff.h": "f15a825dec82baa9c246544f564c6af96dfcc6ac0a13390b8588befa4a21f008",
+    "vrx/netrunner_runtime/tests/handoff_test.c": "6a105a56f8ca842122a63712e36fc1285bdcabbb5272350a801a5cb6af76c47c",
+    "runtime/netrunner_handoff.py": "b7961c4acfec3d243711c54e77a1b448c1876354bec5373842a3026917ac9319",
+    "runtime/netrunner.py": "8673007f979ba4095477e08e7dc2ce1073f33bcab8b1484370cb04b57a1724e9"
+  },
+  "tests": 1,
+  "omitted": "Full host UI/deployment, private bootstrap, binaries, captures and standalone lifecycle",
+  "transformations": [
+    {
+      "path": "host/netrunner_config.py",
+      "operation": "Extract configuration constants, exception and pure defaults/validate/receiver_policy_config definitions; omit receiver profiles and document/qualification wrapper"
+    },
+    {
+      "path": "host/network_validation.py",
+      "operation": "AST-select pure network validators/constants/error type; exclude observation, device qualification, credentials storage, command builders and routing; reject unusable IPv4 subnet/endpoints and invalid UTF-8 SSIDs in local candidate only",
+      "source_revision": "e2163b9bda1976364c5bcc19332b497ea775844b",
+      "source_ast_check": "All 13 selected names match the prior source snapshot before transformation. Two validators retain the documented candidate-only changes."
+    }
+  ],
+  "validation_tools": {
+    "tools/check_tree.py": "a6ebf4b947530b76345fccc453ff19c0730df7102cadd69e97b0cc678c6d73c0",
+    "tools/check_public_runtime.py": "9f627cccfeefec4dfb7a5257db7b89c31c11a5a149bdd3634e9517e3fa36b756",
+    "tools/privacy_review.py": "df4fced039d91adcdaa0f73d4a2c75243a9c6e3c60a4000782727b69c974389f"
+  },
+  "export_files": {
+    "host-checks.json": "e94098292a671d9f8f1dd69252225a16526dfeb9dd0ff00921714555b2f7e533",
+    "README.md": "98218ba75000516f96aec3e8dbead73fe46f056c94bc94f20927fe04c85c3f76",
+    "run_host_checks.py": "1d35ef7a30e94280c92c70eb653debbe390dc69ca390b9d27e326effb01ebf4b",
+    "tools/check_tree.py": "a6ebf4b947530b76345fccc453ff19c0730df7102cadd69e97b0cc678c6d73c0",
+    "tools/check_public_runtime.py": "9f627cccfeefec4dfb7a5257db7b89c31c11a5a149bdd3634e9517e3fa36b756",
+    "tools/privacy_review.py": "df4fced039d91adcdaa0f73d4a2c75243a9c6e3c60a4000782727b69c974389f",
+    "vrx/netrunner_runtime/netrunner_handoff.c": "d4b4c7d5e0f6ead28e967606a9d3218b8292087400c4582e7a8604d834d8d0e6",
+    "vrx/netrunner_runtime/netrunner_handoff.h": "f15a825dec82baa9c246544f564c6af96dfcc6ac0a13390b8588befa4a21f008",
+    "vrx/netrunner_runtime/tests/handoff_test.c": "6a105a56f8ca842122a63712e36fc1285bdcabbb5272350a801a5cb6af76c47c",
+    "host/netrunner_config.py": "696eb700876ba7824651c587755bd009314a299613306d797de9f3714125aad9",
+    "tests/test_host_config.py": "a6c11a75c0f9f4a6c3edee86a7689a64f983030f1fb0a589079fce4618073a19",
+    "host/network_validation.py": "4f6dfad1af3cbbf21a0c58dc41afe11a31ff7d84d2467ba1b5c4607c3bbaa824",
+    "tests/test_network_validation.py": "1e76bb6abb29132e4bf4dc6df342d0c9828c2013157007e44b281b2aab17860e"
+  },
+  "full_runtime_gate": "Explicit native-subset inventory profile; not full widget or release approval"
+}

@@ -1,0 +1,92 @@
+{
+  "schema": "ascent.widget.source_inventory.v1",
+  "widget": "netrunner",
+  "stage": "native-subset",
+  "files": {
+    "README.md": {
+      "sha256": "98218ba75000516f96aec3e8dbead73fe46f056c94bc94f20927fe04c85c3f76",
+      "bytes": 1411,
+      "role": "document"
+    },
+    "SOURCE_MANIFEST.json": {
+      "sha256": "8cbdcd5e0088e3227c380e5c730b966d5d10e8a43eb123ab72f589488c87429d",
+      "bytes": 3411,
+      "role": "document"
+    },
+    "host-checks.json": {
+      "sha256": "e94098292a671d9f8f1dd69252225a16526dfeb9dd0ff00921714555b2f7e533",
+      "bytes": 152,
+      "role": "build"
+    },
+    "host/netrunner_config.py": {
+      "sha256": "696eb700876ba7824651c587755bd009314a299613306d797de9f3714125aad9",
+      "bytes": 1891,
+      "role": "runtime"
+    },
+    "host/network_validation.py": {
+      "role": "runtime",
+      "sha256": "4f6dfad1af3cbbf21a0c58dc41afe11a31ff7d84d2467ba1b5c4607c3bbaa824",
+      "bytes": 6255
+    },
+    "run_host_checks.py": {
+      "sha256": "1d35ef7a30e94280c92c70eb653debbe390dc69ca390b9d27e326effb01ebf4b",
+      "bytes": 1225,
+      "role": "tool"
+    },
+    "tests/test_host_config.py": {
+      "sha256": "a6c11a75c0f9f4a6c3edee86a7689a64f983030f1fb0a589079fce4618073a19",
+      "bytes": 3182,
+      "role": "test"
+    },
+    "tests/test_network_validation.py": {
+      "role": "test",
+      "sha256": "1e76bb6abb29132e4bf4dc6df342d0c9828c2013157007e44b281b2aab17860e",
+      "bytes": 4056
+    },
+    "tools/check_public_runtime.py": {
+      "sha256": "9f627cccfeefec4dfb7a5257db7b89c31c11a5a149bdd3634e9517e3fa36b756",
+      "bytes": 11567,
+      "role": "tool"
+    },
+    "tools/check_tree.py": {
+      "sha256": "a6ebf4b947530b76345fccc453ff19c0730df7102cadd69e97b0cc678c6d73c0",
+      "bytes": 1494,
+      "role": "tool"
+    },
+    "tools/privacy_review.py": {
+      "sha256": "df4fced039d91adcdaa0f73d4a2c75243a9c6e3c60a4000782727b69c974389f",
+      "bytes": 13695,
+      "role": "tool"
+    },
+    "vrx/netrunner_runtime/netrunner_handoff.c": {
+      "sha256": "d4b4c7d5e0f6ead28e967606a9d3218b8292087400c4582e7a8604d834d8d0e6",
+      "bytes": 5315,
+      "role": "runtime"
+    },
+    "vrx/netrunner_runtime/netrunner_handoff.h": {
+      "sha256": "f15a825dec82baa9c246544f564c6af96dfcc6ac0a13390b8588befa4a21f008",
+      "bytes": 2970,
+      "role": "runtime"
+    },
+    "vrx/netrunner_runtime/tests/handoff_test.c": {
+      "sha256": "6a105a56f8ca842122a63712e36fc1285bdcabbb5272350a801a5cb6af76c47c",
+      "bytes": 6967,
+      "role": "test"
+    }
+  },
+  "include_roots": [
+    "vrx/netrunner_runtime"
+  ],
+  "system_headers": [
+    "stdbool.h",
+    "stddef.h",
+    "stdint.h",
+    "stdio.h",
+    "stdlib.h",
+    "string.h"
+  ],
+  "python_imports": [
+    "__future__",
+    "ipaddress"
+  ]
+}
