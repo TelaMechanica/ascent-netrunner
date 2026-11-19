@@ -1,8 +1,7 @@
-# ascent-netrunner — local extraction experiment
+# ASCENT Netrunner
 
-Not a released or publication-cleared repository. Exact source copies test only a
-bounded subset. No installation, execution adapter or hardware qualification.
-Original source provenance and licenses require review before distribution.
+This repository publishes the standalone source subset and host checks.
+An installable Widget Manager package and receiver qualification are pending.
 Real captures, prebuilt binaries, credential files and private bootstrap are excluded.
 Run python3 -I run_host_checks.py --output <fresh-directory>.
 

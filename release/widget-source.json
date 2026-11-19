@@ -4,12 +4,12 @@
   "stage": "native-subset",
   "files": {
     "README.md": {
-      "sha256": "98218ba75000516f96aec3e8dbead73fe46f056c94bc94f20927fe04c85c3f76",
-      "bytes": 1411,
+      "sha256": "130cf6c5b5e543863164e9bf275f3762941caf0373eeaae95865ae5064bf5295",
+      "bytes": 1293,
       "role": "document"
     },
     "SOURCE_MANIFEST.json": {
-      "sha256": "8cbdcd5e0088e3227c380e5c730b966d5d10e8a43eb123ab72f589488c87429d",
+      "sha256": "1fb610a0fd35171e13898423acc47552a4359f780b06ab7f74122e92d1c24211",
       "bytes": 3411,
       "role": "document"
     },
