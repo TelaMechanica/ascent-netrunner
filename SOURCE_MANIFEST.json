@@ -30,7 +30,7 @@
   },
   "export_files": {
     "host-checks.json": "e94098292a671d9f8f1dd69252225a16526dfeb9dd0ff00921714555b2f7e533",
-    "README.md": "130cf6c5b5e543863164e9bf275f3762941caf0373eeaae95865ae5064bf5295",
+    "README.md": "c01c20ebb0e1e5422f8719c5f4b26e3a9ea8a509ebee972ce79efefe1c7d990a",
     "run_host_checks.py": "1d35ef7a30e94280c92c70eb653debbe390dc69ca390b9d27e326effb01ebf4b",
     "tools/check_tree.py": "a6ebf4b947530b76345fccc453ff19c0730df7102cadd69e97b0cc678c6d73c0",
     "tools/check_public_runtime.py": "9f627cccfeefec4dfb7a5257db7b89c31c11a5a149bdd3634e9517e3fa36b756",
@@ -41,7 +41,23 @@
     "host/netrunner_config.py": "696eb700876ba7824651c587755bd009314a299613306d797de9f3714125aad9",
     "tests/test_host_config.py": "a6c11a75c0f9f4a6c3edee86a7689a64f983030f1fb0a589079fce4618073a19",
     "host/network_validation.py": "4f6dfad1af3cbbf21a0c58dc41afe11a31ff7d84d2467ba1b5c4607c3bbaa824",
-    "tests/test_network_validation.py": "1e76bb6abb29132e4bf4dc6df342d0c9828c2013157007e44b281b2aab17860e"
+    "tests/test_network_validation.py": "1e76bb6abb29132e4bf4dc6df342d0c9828c2013157007e44b281b2aab17860e",
+    "receiver/build-max.sh": "1852a6d7a5f41b41c1b53b08a4a8a1cf5e490728895f973201946c345370e371",
+    "receiver/package-max.py": "c8bce7f61dbd81632e1f4dd04aaa4499bbbaeceedae81d427a765f0dd18f5760",
+    "receiver/probe.c": "bcd8cc76f3e305b32434cc37dfcf607f02ef2e79d28d7114e52f089b573a04f8",
+    "receiver/UPSTREAM.md": "3fa7d09fca96b6b890b27a521f0fb0bede9dd3ebb28c5eafc0ecf9d221195547"
   },
-  "full_runtime_gate": "Explicit native-subset inventory profile; not full widget or release approval"
+  "full_runtime_gate": "Explicit native-subset inventory profile; not full widget or release approval",
+  "max_release_build": {
+    "files": [
+      "receiver/UPSTREAM.md",
+      "receiver/build-max.sh",
+      "receiver/package-max.py",
+      "receiver/probe.c"
+    ],
+    "wpa_source_url": "https://w1.fi/releases/wpa_supplicant-2.10.tar.gz",
+    "wpa_source_sha256": "20df7ae5154b3830355f8ab4269123a87affdea59fe74fe9292a91d0d7e17b2f",
+    "libnl_tiny_source_commit": "40493a655d8caa2ccf5206dde1e733abe2920432",
+    "libnl_tiny_tree_sha256": "8cac658d41ca26aeb17b6796ecbd9339dd5bbf02fbb2075ce50b35e67ed5a4bf"
+  }
 }

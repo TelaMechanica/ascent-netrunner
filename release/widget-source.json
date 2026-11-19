@@ -4,13 +4,13 @@
   "stage": "native-subset",
   "files": {
     "README.md": {
-      "sha256": "130cf6c5b5e543863164e9bf275f3762941caf0373eeaae95865ae5064bf5295",
-      "bytes": 1293,
+      "sha256": "c01c20ebb0e1e5422f8719c5f4b26e3a9ea8a509ebee972ce79efefe1c7d990a",
+      "bytes": 2069,
       "role": "document"
     },
     "SOURCE_MANIFEST.json": {
-      "sha256": "1fb610a0fd35171e13898423acc47552a4359f780b06ab7f74122e92d1c24211",
-      "bytes": 3411,
+      "sha256": "eb1c0c7170c1cfc6a352a14172809f8e47887f51a930a3bad4d6cd9ba9d4cb37",
+      "bytes": 4307,
       "role": "document"
     },
     "host-checks.json": {
@@ -72,18 +72,45 @@
       "sha256": "6a105a56f8ca842122a63712e36fc1285bdcabbb5272350a801a5cb6af76c47c",
       "bytes": 6967,
       "role": "test"
+    },
+    "receiver/build-max.sh": {
+      "sha256": "1852a6d7a5f41b41c1b53b08a4a8a1cf5e490728895f973201946c345370e371",
+      "bytes": 2460,
+      "role": "build"
+    },
+    "receiver/package-max.py": {
+      "sha256": "c8bce7f61dbd81632e1f4dd04aaa4499bbbaeceedae81d427a765f0dd18f5760",
+      "bytes": 1091,
+      "role": "build"
+    },
+    "receiver/probe.c": {
+      "sha256": "bcd8cc76f3e305b32434cc37dfcf607f02ef2e79d28d7114e52f089b573a04f8",
+      "bytes": 5111,
+      "role": "runtime"
+    },
+    "receiver/UPSTREAM.md": {
+      "sha256": "3fa7d09fca96b6b890b27a521f0fb0bede9dd3ebb28c5eafc0ecf9d221195547",
+      "bytes": 843,
+      "role": "document"
     }
   },
   "include_roots": [
     "vrx/netrunner_runtime"
   ],
   "system_headers": [
+    "errno.h",
+    "linux/genetlink.h",
+    "linux/netlink.h",
+    "linux/nl80211.h",
+    "net/if.h",
     "stdbool.h",
     "stddef.h",
     "stdint.h",
     "stdio.h",
     "stdlib.h",
-    "string.h"
+    "string.h",
+    "sys/socket.h",
+    "unistd.h"
   ],
   "python_imports": [
     "__future__",
