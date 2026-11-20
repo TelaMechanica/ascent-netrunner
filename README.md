@@ -25,7 +25,7 @@ refusal. Original engineering runtime files remain unchanged; adoption is pendin
 | Receiver | Integrated behavior and standalone status |
 | --- | --- |
 | Basic / Classic VRX | Integrated AC+ has a separate, time-limited guarded AP workflow for an exact Basic / Classic profile. Standalone packaging and a full AP/client/off lifecycle are pending. |
-| VRX Pro | Integrated AC+ bench evidence covers AP, client, and off on firmware 18.21.10. The Pro radio profile and command builders are included in `host/pro_radio.py`. Standalone packaging and Widget Manager lifecycle qualification are pending. |
+| VRX Pro | Integrated AC+ bench evidence covers AP, client, and off on firmware 18.21.10. The Pro radio profile and command builders are included in `host/pro_radio.py`. The client-tool archive recipe is below. Standalone Widget Manager lifecycle qualification is pending. |
 | VRX MAX | The standalone MAX build candidate is below. Its archive and Widget Manager lifecycle still require on-device qualification. |
 
 ### MAX receiver build candidate
@@ -44,3 +44,16 @@ The build retains the libraries, WPA build objects and configuration used for
 relinking. The archive contains the two Wi-Fi executables and the ASCENT
 channel probe. It uses static linkage and requires receiver qualification
 before replacing the MAX binaries built against receiver-provided libraries.
+
+### Pro client-tool archive candidate
+
+Pro firmware 18.21.10 uses the three reviewed client tools with the Pro radio
+profile and the firmware's own driver and DHCP hook. Package the exact tools
+from the matching integrated AC+ build:
+
+```sh
+python3 receiver/package-max.py --profile pro-18.21.10 /path/to/reviewed-client-tools /tmp/netrunner-pro.zip
+```
+
+The recipe checks all three tool digests. Pro-specific Widget Manager admission,
+lifecycle handling and receiver qualification are pending.
