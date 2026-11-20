@@ -13,16 +13,26 @@ PRO_FILES = {
 }
 
 
+BASIC_FILES = {
+    '8188fu.ko': 'bba7c6739bb4839821c336255714439849b453d0b94197f4b32847422ce85ee1',
+    'busybox': '3f278e53cfd24c4ea0a2bdd148a53bd974e1cb6e79904562d5a7d1b451c465bc',
+    'hostapd': 'c6b43d30f51ebcdd98bdd57491520925deb0df08c3b538c7953fdcd039eeffa7',
+    'hostapd_cli': '4623a4c9e37d48119feefd0ae9d228ac0fbe2b401045f7ff8d4243f8b9089a70',
+}
+PROFILE_PINS = {'pro-18.21.10': PRO_FILES, 'classic-gnd485-19.2.14': BASIC_FILES}
+
+
 def main():
     parser = ArgumentParser(description=__doc__)
     parser.add_argument('build_directory', type=Path)
     parser.add_argument('archive', type=Path)
-    parser.add_argument('--profile', choices=('max', 'pro-18.21.10'), default='max')
+    parser.add_argument('--profile', choices=('max', *PROFILE_PINS), default='max')
     args = parser.parse_args()
-    blobs = {name: (args.build_directory / name).read_bytes() for name in FILES}
+    expected = PROFILE_PINS.get(args.profile)
+    blobs = {name: (args.build_directory / name).read_bytes() for name in (expected or FILES)}
     digests = {name: sha256(data).hexdigest() for name, data in blobs.items()}
-    if args.profile == 'pro-18.21.10' and digests != PRO_FILES:
-        parser.error('Pro packaging requires the reviewed client tools for firmware 18.21.10')
+    if expected is not None and digests != expected:
+        parser.error(f'{args.profile} packaging requires its reviewed binary inventory')
     with ZipFile(args.archive, 'x') as package:
         for name, data in blobs.items():
             entry = ZipInfo(name)

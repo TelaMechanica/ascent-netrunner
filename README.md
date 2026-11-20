@@ -24,7 +24,7 @@ refusal. Original engineering runtime files remain unchanged; adoption is pendin
 
 | Receiver | Integrated behavior and standalone status |
 | --- | --- |
-| Basic / Classic VRX | Integrated AC+ has a separate, time-limited guarded AP workflow for an exact Basic / Classic profile. Standalone packaging and a full AP/client/off lifecycle are pending. |
+| Basic / Classic VRX | Integrated AC+ has a separate, time-limited guarded AP workflow for an exact Basic / Classic profile. The guarded AP archive recipe is below. Standalone lifecycle and Classic client support are pending. |
 | VRX Pro | Integrated AC+ bench evidence covers AP, client, and off on firmware 18.21.10. The Pro radio profile and command builders are included in `host/pro_radio.py`. The client-tool archive recipe is below. Standalone Widget Manager lifecycle qualification is pending. |
 | VRX MAX | The standalone MAX build candidate is below. Its archive and Widget Manager lifecycle still require on-device qualification. |
 
@@ -57,3 +57,17 @@ python3 receiver/package-max.py --profile pro-18.21.10 /path/to/reviewed-client-
 
 The recipe checks all three tool digests. Pro-specific Widget Manager admission,
 lifecycle handling and receiver qualification are pending.
+
+### Basic / Classic guarded AP archive candidate
+
+The Classic Gnd485 Ground 19.2.14 AP path uses a different driver, AP userspace
+and DHCP tools. Package the four reviewed binaries from the corresponding
+integrated AC+ distribution:
+
+```sh
+python3 receiver/package-max.py --profile classic-gnd485-19.2.14 /path/to/reviewed-ap-tools /tmp/netrunner-classic-ap.zip
+```
+
+This is the binary input for the guarded AP path. The archive carries no
+configuration, credentials or startup actions. Standalone admission and the
+Classic AP/client/off lifecycle still need validation.
