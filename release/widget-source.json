@@ -4,8 +4,8 @@
   "stage": "native-subset",
   "files": {
     "README.md": {
-      "sha256": "c01c20ebb0e1e5422f8719c5f4b26e3a9ea8a509ebee972ce79efefe1c7d990a",
-      "bytes": 2069,
+      "sha256": "b949f56b76a803f4e7b7cc8bbf049710bddf3e535950e2fb06ecd99aa80d4320",
+      "bytes": 2677,
       "role": "document"
     },
     "SOURCE_MANIFEST.json": {

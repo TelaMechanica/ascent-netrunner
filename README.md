@@ -1,7 +1,7 @@
 # ASCENT Netrunner
 
 This repository publishes the standalone source subset and host checks.
-An installable Widget Manager package and receiver qualification are pending.
+Standalone Widget Manager releases are pending. See the receiver status below.
 Real captures, prebuilt binaries, credential files and private bootstrap are excluded.
 Run python3 -I run_host_checks.py --output <fresh-directory>.
 
@@ -21,7 +21,15 @@ and routing integrations. Compared with the original host helper, this candidate
 rejects unusable subnet/endpoints and normalizes invalid UTF-8 SSIDs to a typed
 refusal. Original engineering runtime files remain unchanged; adoption is pending.
 
-## MAX receiver build candidate
+## Receiver status
+
+| Receiver | Integrated behavior and standalone status |
+| --- | --- |
+| Basic / Classic VRX | Integrated AC+ distinguishes software detection from physical Wi-Fi presence. A standalone package and an on-device AP/client/off qualification record are pending. |
+| VRX Pro | Integrated AC+ bench evidence covers AP, client, and off on firmware 18.21.10. The standalone Pro recipe, package, and Widget Manager lifecycle qualification are pending. |
+| VRX MAX | The standalone MAX build candidate is below. Its archive and Widget Manager lifecycle still require on-device qualification. |
+
+### MAX receiver build candidate
 
 The build uses WPA Supplicant 2.10 and libnl-tiny at commit
 `40493a655d8caa2ccf5206dde1e733abe2920432`. Place the pinned archives in the
