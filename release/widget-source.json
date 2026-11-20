@@ -5,8 +5,8 @@
   "files": {
     "README.md": {
       "role": "document",
-      "bytes": 3180,
-      "sha256": "1820420b1d445eeb9a8fd447efa4ccaa0a50bdbf25b506cc6dc2e2f4603980ab"
+      "bytes": 3784,
+      "sha256": "056e9e03b96cfb0809d053f78c0bae9041546de3d8f585f741dbe939f54b3d78"
     },
     "SOURCE_MANIFEST.json": {
       "sha256": "eb1c0c7170c1cfc6a352a14172809f8e47887f51a930a3bad4d6cd9ba9d4cb37",
@@ -79,8 +79,8 @@
       "role": "build"
     },
     "receiver/package-max.py": {
-      "sha256": "d8bb6d6b29c2d1b8a2e648da7da3834a633482d6bc82e7a903ab774492a5df3a",
-      "bytes": 1710,
+      "sha256": "48f880675160dd5268b450f751da4f16c3b2a993eb4262a56804c621b242286c",
+      "bytes": 2192,
       "role": "build"
     },
     "receiver/probe.c": {
