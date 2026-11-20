@@ -4,9 +4,9 @@
   "stage": "native-subset",
   "files": {
     "README.md": {
-      "sha256": "b949f56b76a803f4e7b7cc8bbf049710bddf3e535950e2fb06ecd99aa80d4320",
-      "bytes": 2677,
-      "role": "document"
+      "role": "document",
+      "bytes": 2658,
+      "sha256": "700c441b938904767cd356b7bf13f5e4b5b97efb8ae571fb7f2896df1e713577"
     },
     "SOURCE_MANIFEST.json": {
       "sha256": "eb1c0c7170c1cfc6a352a14172809f8e47887f51a930a3bad4d6cd9ba9d4cb37",
@@ -92,6 +92,11 @@
       "sha256": "3fa7d09fca96b6b890b27a521f0fb0bede9dd3ebb28c5eafc0ecf9d221195547",
       "bytes": 843,
       "role": "document"
+    },
+    "host/pro_radio.py": {
+      "role": "runtime",
+      "bytes": 3314,
+      "sha256": "df8535031371af703ad3aea27110c8beb8f07b2f0b4d6e6b0f24261eea6feb8b"
     }
   },
   "include_roots": [
