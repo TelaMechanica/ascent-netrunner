@@ -75,3 +75,17 @@ Classic AP/client/off lifecycle still need validation.
 The host observation protocol combines a complete set of trusted read probes
 and validates each framed response before exposing the results. The caller
 supplies the receiver-profile commands and owns access to the receiver.
+
+### Host-enabled offline package
+
+Given the exact local 2.10.3 unified qualification archive, build an offline
+candidate using the observation module in this repository:
+
+```sh
+python3 receiver/package-host-bundle.py netrunner-qualification.zip netrunner-bench.zip
+```
+
+The recipe verifies its input and replaces only the host module. The candidate
+requires an AC+ build that supports the probe API and a reviewed package digest.
+The receiver variants and Classic assets retain their existing release and
+qualification requirements.
