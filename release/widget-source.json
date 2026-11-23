@@ -100,8 +100,8 @@
     },
     "host/network_observation.py": {
       "role": "runtime",
-      "bytes": 2362,
-      "sha256": "0e0433d6d15d99cae8bccf634b8a2ebee44cd5b01f6e4fb241868c530e09d8a3"
+      "bytes": 2376,
+      "sha256": "0378f2d1e1e9106a8b5e082670352d5cfa3191e9d29723668780c7aeaa314a47"
     },
     "tests/test_network_observation.py": {
       "role": "test",

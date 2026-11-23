@@ -1,5 +1,6 @@
 """Frame the existing NetRunner read probes and verify their complete reply."""
 
+PROBE_API = 1
 PREFIX = 'ASCENT_NETWORK_OBSERVATION_V1'
 SECTIONS = ('interfaces', 'ap', 'channels', 'forwarding',
             'hardware', 'tools', 'client', 'startup')
