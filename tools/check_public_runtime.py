@@ -150,7 +150,12 @@ def check_widget_inventory(root, inventory):
             tree=ast.parse(path.read_bytes())
             for node in ast.walk(tree):
                 modules=[a.name for a in node.names] if isinstance(node,ast.Import) else [node.module or ''] if isinstance(node,ast.ImportFrom) else []
-                if isinstance(node,ast.ImportFrom) and node.level:_reject('Relative Python import requires review')
+                if isinstance(node, ast.ImportFrom) and node.level:
+                    if (node.level != 1 or not node.module or not node.module.isidentifier()
+                            or (PurePosixPath(name).parent / (node.module + '.py')).as_posix()
+                            not in runtime):
+                        _reject('Relative Python import requires a reviewed sibling module')
+                    continue
                 if any(module.split('.')[0] not in set(imports)|local_modules for module in modules):_reject('Undeclared Python import')
                 if isinstance(node,ast.Call):
                     if isinstance(node.func,ast.Name) and node.func.id in ('eval','exec','compile','__import__'):_reject('Dynamic Python execution requires review')

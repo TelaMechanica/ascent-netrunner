@@ -71,3 +71,7 @@ python3 receiver/package-max.py --profile classic-gnd485-19.2.14 /path/to/review
 This is the binary input for the guarded AP path. The archive carries no
 configuration, credentials or startup actions. Standalone admission and the
 Classic AP/client/off lifecycle still need validation.
+
+The host observation protocol combines a complete set of trusted read probes
+and validates each framed response before exposing the results. The caller
+supplies the receiver-profile commands and owns access to the receiver.

@@ -5,8 +5,8 @@
   "files": {
     "README.md": {
       "role": "document",
-      "bytes": 3784,
-      "sha256": "056e9e03b96cfb0809d053f78c0bae9041546de3d8f585f741dbe939f54b3d78"
+      "bytes": 4009,
+      "sha256": "78b382fc41f9fcd631786e6e22b65fbe2273f3636a8c0dd2ce03cb9484889b10"
     },
     "SOURCE_MANIFEST.json": {
       "sha256": "eb1c0c7170c1cfc6a352a14172809f8e47887f51a930a3bad4d6cd9ba9d4cb37",
@@ -44,8 +44,8 @@
       "bytes": 4056
     },
     "tools/check_public_runtime.py": {
-      "sha256": "9f627cccfeefec4dfb7a5257db7b89c31c11a5a149bdd3634e9517e3fa36b756",
-      "bytes": 11567,
+      "sha256": "2cb11b0b54d01909bf014e28557116ad3ef0d481c34f2a751bc046270dc7563b",
+      "bytes": 11874,
       "role": "tool"
     },
     "tools/check_tree.py": {
@@ -97,6 +97,16 @@
       "role": "runtime",
       "bytes": 3314,
       "sha256": "df8535031371af703ad3aea27110c8beb8f07b2f0b4d6e6b0f24261eea6feb8b"
+    },
+    "host/network_observation.py": {
+      "role": "runtime",
+      "bytes": 2376,
+      "sha256": "0378f2d1e1e9106a8b5e082670352d5cfa3191e9d29723668780c7aeaa314a47"
+    },
+    "tests/test_network_observation.py": {
+      "role": "test",
+      "bytes": 1197,
+      "sha256": "3ad72861e470c9494b017260403e1cadf61d45d30ad54abb22602b7354bdf5dd"
     }
   },
   "include_roots": [
